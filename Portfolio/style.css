@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+html {
+  height:100%;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  line-height: 1.27;
+  font-weight: 400;
+  z-index: 0;
+  color: transparent;
+  text-shadow: 0 0 1.5px #000;
+}
+
+.to-top{
+  position: fixed;
+  top: 96vh;
+  left: 1vw;
+  border-radius: 40%;
+  z-index: 3;
+  opacity: 0.5;
+}
+
+.to-top img{
+  height: 26px;
+  border-radius: 40%;
+}
+
+.to-top:hover, .to-top img:hover{
+  background-color:orangered;
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.transparency-top{
+  width:100%;
+  background-image:linear-gradient( to bottom, rgba(255,255,255,1)20%, rgba(255,255,255,0)40%);
+  height: 200px;
+  z-index: 2;
+  position: fixed;
+}
+
+.transparency-bottom{
+  width:100%;
+  background-image:linear-gradient( to top, rgba(255,255,255,1)5%, rgba(255,255,255,0)62%);
+  height: 40px;
+  z-index: 2;
+  position: fixed;
+  top:97%;
+}
+
+.hidden{
+  opacity: 0;
+  transition-duration:3s;
+  filter:blur(3px);
+  transform: translateX(-100%);
+}
+
+.hidden1{
+  opacity: 0;
+  transition-duration:3s;
+  filter:blur(3px);
+  transform: translateX(100%);
+}
+
+.hidden2{
+opacity: 0;
+transition-duration:3s;
+filter:blur(3px);
+transform: translateY(100%);
+}
+
+/*show for hidden/1*/
+.show{
+  opacity: 1;
+  filter:blur(0);
+  transform: translateX(0);
+}
+
+/*only for hidden2*/
+.show1{
+  opacity: 1;
+  filter:blur(0);
+  transform: translateY(0%);
+}
+
+/*NAV ELEMENTS*/
+
+nav {
+  padding-top: 15px;
+  padding-left: 15px;
+  position: fixed;
+  top: 0px;
+  background-image:linear-gradient( to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+  height:40px;
+  z-index: 3;
+}
+
+nav li{
+  list-style: none;
+  display: inline;
+  margin-right: 20px;
+}
+
+.logo{
+  margin-right: 65vw;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 25px;
+  text-decoration: underline;
+  text-shadow: 0 0 1px #000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a:hover{
+  color: orangered;
+  opacity: 0.8;
+  transition-duration: 1.5s;
+}
+
+/*HEADER CONTENTS*/
+
+.header-container {
+  margin: auto;
+  width:56%;
+  font-size: 60px;
+  font-weight: 700;
+  position: absolute;
+  left:25%;
+  right: 25%;
+  top: 25%; 
+  z-index: 1; 
+  background: #000;
+}
+
+.header{
+  color: transparent;
+  text-shadow: 0 0 4px #000;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+
+}
+
+.behind-image {
+  margin: auto;
+  position: absolute;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/*SHAPES OR PLANETS*/
+
+.shape{
+  opacity: 0.05;
+  z-index: -2;
+  position:absolute;
+}
+
+.shape-size{
+  height:500px;
+}
+
+.moon{
+  top: 400vh;
+  left:60vw;
+}
+
+.jupiter{
+  top: 290vh;
+  left:4vw;
+  opacity:0.04
+}
+
+.earth{
+  top:230vh;
+  left: 65vw;
+}
+
+.galaxy{
+  top: 130vh;
+  left: 70vh;
+}
+.saturn{
+  top: 180vh;
+  left:4vw;
+  opacity:0.03;
+}
+
+/*WORK*/
+
+#work{
+  position:absolute;
+  top:170vh;
+}
+.work-container{
+  display: flexbox;
+  position: relative;
+  top: 185vh;
+}
+
+.work-header{
+  font-weight:400;
+  font-size:60px;
+  width: 500px;
+  position: relative;
+  left: 25%;
+  top: 1%;
+
+}
+.work-item{
+  display: flex;
+  height: 480px;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 18px;
+  background-color: #fbfbfa;
+  border-radius: 3px;
+  overflow:hidden;
+}
+
+.work-item:nth-child(odd){
+  margin-right: 400px;
+}
+
+.work-item:nth-child(even){
+  margin-left: 400px;
+}
+
+.work-item-left{
+  display: block;
+  width:50%;
+  float: left;
+}
+
+.work-item-right{
+  display: block;
+  width: 50%;
+  float: right;
+}
+
+.work-item img{
+  width:90%;
+  border-radius: 100%;
+  box-shadow: 0 1 15px #000;
+  text-shadow: 0 0 15px #000;
+  opacity:0.8;
+}
+
+.work-item-header-right{
+  font-weight:400;
+  font-size:40px;
+  width: 500px;  
+  position: relative;
+  left:48%;
+  top: 3%;
+}
+
+
+.work-item-header-left{
+  font-weight:400;
+  font-size:40px;
+  width: 500px;
+  position: relative;
+  left: 33%;
+  top: 1%;
+}
+
+/*CONTACT*/
+
+
+#contact{
+  position: absolute;
+  top:480vh;
+}
+.contact-container{
+  position:relative;
+  top: 240vh;
+  display: flexbox;
+  z-index: 3;
+  padding-bottom: 19vh;
+}
+
+.contact-form{
+  display: flex;
+  margin-left: auto;
+  margin-right:25%;
+  max-width: 500px;
+  margin-top: 24vh;
+
+}
+
+.contact-container h4{
+  font-weight:400;
+  font-size:60px;
+  width: 500px;
+  position: relative;
+  left: 25%;
+  top: 1%;
+}
+.contact-input{
+  display:flex;
+  margin: auto;
+  width: 550px;
+  margin-bottom: 40px;
+  height: 40px;
+  background-color: #fbfbfa;
+  border-bottom: 1px ridge #eceaea;
+}
+
+.contact-input::placeholder{
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif !important;
+  color: transparent;
+  text-shadow: 0 0 1.3px rgb(66, 66, 66);
+  position:relative;
+  left: 10px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+textarea, input{
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif !important;
+  color: transparent;
+  text-shadow: 0 0 1.3px rgb(66, 66, 66);
+  padding-left: 15px;
+}
+
+.contact-physical{
+  margin-left: 27%;
+  margin-right:auto;
+  margin-bottom: 55px;
+  max-width: 400px;
+  position: absolute;
+  top: 37vh;
+}
+
+.physical{
+  display: block;
+  margin-bottom: 50px;
+  text-decoration: none;
+  color: transparent;
+  text-shadow: 0 0 1.5px #000;
+}
+  
+.physical:hover{
+    color: orangered;
+    opacity: 0.8;
+    transition-duration: 1.5s;
+  }
+
+  /*FOOTER*/
+
+footer {
+  position: relative;
+  top:250vh;
+  height: 200px;
+}
+
+.footer-line{
+  border-bottom: 1px solid transparent;
+  box-shadow: 0px 1px 0px rgb(143, 143, 143);
+  width: 80vw;
+  margin:auto;
+}

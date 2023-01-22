@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+
+<!--
+    x-Orange and white portfolio, 
+    onclick change colours
+    x-blur the header a tad, 
+    find out how to use mixblendmode 
+    add small animation from element to next element
+    top work project could dissipate only allowing two on screen at a time
+    with a image shape behind it still moving with parralax
+    x- sticky nav bar
+    call to actions
+-->
+<body>
+<div id="top"></div>
+
+<!--
+    NAV
+
+    doesnt need a whole lot of work
+
+-->
+<nav>
+    <ul>
+        <li class="logo">J. M.</li>
+        <li class="nav-element"><a href="#work">Work</a></li>
+        <li class="nav-element"><a href="#about">About</a></li>
+        <li class="nav-element"><a href="#contact">Contact</a></li>
+        <a class="nav-element resume" href="cv.pdf" target="_blank" rel="noopener noreferrer">Résumé  &nbsp&nbsp⭳</a>
+    </ul>
+</nav>
+
+<!--BUTTON TO TOP
+
+    keep checking it works, ends up going funny sometimes.
+-->
+<a class="to-top" href="#top"><img src="seal-black-border.png"></a>
+
+<!--ADDED GRADIENT IN CSS -->
+<div class="transparency-top"></div>
+<div class="transparency-bottom"></div>
+
+<!--HEADER
+
+    looks good
+    animate upon load/scroll the text appearing then the picture
+-->
+<div class="header-container">
+    <div class="header hidden">
+        <h1>Jupiter Manikiza</h1>
+        <h2 class="header-changer">Full-Stack Developer</h2>
+        <h2>London, UK</h2>
+    </div>
+    <div class="image">
+        <img class="behind-image hidden2" src="Joe.png">
+    </div>
+</div>
+
+<!--BEHIND WORK CONTAINER - PICTURES
+
+    plenty of pictures, no more.
+    animate them appearing and maybe moving/spinning
+-->
+<div class="moon shape hidden"><img class="shape-size" src="moon.png"></div>
+<div class="jupiter shape hidden1"><img class="shape-size" src="jupiter.png"></div>
+<div class="saturn shape hidden"><img  class="shape-size"src="saturn.png"></div>
+<div class="earth shape hidden1"><img class="shape-size" src="earth.jpg"></div>
+<div class="galaxy shape hidden2"><img class="shape-size" src="galaxy.png"></div>
+
+<!--
+    WORK
+
+    animate them coming into the screen upon scroll
+    fill them with projects. must complete them...
+    add gui to the cabinship one
+
+    WE HAVE GOOD WORK TO PROVIDE 
+
+    add github repos
+    add video presentations
+    add something else, maybe host it here to download
+
+-->
+<div id="work"></div>
+<div class="work-container">
+    <h4 class="work-header hidden">Work</h4>
+    <h4 class="work-item-header-right hidden1">Consultation Management System</h4>
+    <div class="work-item hidden">
+        <div class="work-item-left hidden"><img src="WSCC.jpg"></div>
+        <div class="work-item-right hidden">
+        <p></p>
+        </div>
+    </div>
+    <h4 class="work-item-header-left hidden">crud system</h4>
+    <div class="work-item hidden1">
+        <div class="work-item-left hidden1">
+            <p></p>
+        </div>
+        <div class="work-item-right hidden1"><img src="Cruise.png"></div>
+    </div>
+    <h4 class="work-item-header-right hidden">3D Interactive Product</h4>
+    <div class="work-item hidden1">
+        <div class="work-item-left hidden1"><img src="Game.jpg"></div>
+        <div class="work-item-right hidden1">
+        <p></p>
+        </div>
+    </div>
+    <h4 class="work-item-header-left hidden1">wonder</h4>
+    <div class="work-item hidden">
+        <div class="work-item-left hidden">
+            <p></p>
+        </div>
+        <div class="work-item-right hidden"><img src="websites.jpg"></div>
+    </div>
+</div>
+
+<!--
+    CONTACT
+-->
+<div id="contact"></div>
+<div class="contact-container hidden">
+    <h4>Contact</h4>
+    <div class="contact-form hidden">
+        <form>
+            <input type="text"  class="contact-input hidden" placeholder="Name" required>
+            <input type="email"  class="contact-input hidden" placeholder="Email@example.com" required>
+            <textarea placeholder="Say hello!.." class="contact-input hidden"  required></textarea>
+            <input type="submit" class="contact-input submit hidden"  value="submit">
+        </form>
+    </div>
+
+    <div class="contact-physical hidden">
+        <a class="physical hidden" href="mailto:J.Manikiza@hotmail.co.uk">J.Manikiza@hotmail.co.uk</a>
+        <a class="physical hidden" href="tel:+447725212029">+447725212029</a>
+    </div>
+</div>
+
+</body>
+<footer>
+    <div class="footer-line hidden"></div>
+    <div class="footer-container">
+
+        <p></p>
+    </div>
+</footer>
+</html>
