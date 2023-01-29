@@ -4,7 +4,9 @@
     <title>木星</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
+<script defer src="https://smtpjs.com/v3/smtp.js"></script>
 <script defer src="script.js"></script>
+<script src="https://kit.fontawesome.com/941097557f.js" crossorigin="anonymous"></script>
 </head>
 
 <!--
@@ -28,11 +30,18 @@
 
 -->
 <nav>
+    <div class="colour-changer-container">
+        <div class="white-colour"></div>
+        <div class="blue-colour"></div>
+        <div class="red-colour"></div>
+        <div class="black-colour"></div>
+        <div class="green-colour"></div>
+    </div>
     <ul>
         <li class="logo">J. M.</li>
-        <li class="nav-element"><a href="#work">Work</a></li>
+        <li class="nav-element"><a href="portfolio.html#work">Work</a></li>
         <li class="nav-element"><a href="about.html">About</a></li>
-        <li class="nav-element"><a href="#contact">Contact</a></li>
+        <li class="nav-element"><a href="portfolio.html#contact">Contact</a></li>
         <a class="nav-element resume" href="cv.pdf" target="_blank" rel="noopener noreferrer">Résumé  &nbsp&nbsp⭳</a>
     </ul>
 </nav>
@@ -47,20 +56,39 @@
 <div class="transparency-top"></div>
 <div class="transparency-bottom"></div>
 
+<!--ASIDE ELEMENT-->
+<div class="aside-container">
+        <button  id="button-transform" class="aside-button" onclick="asideAnim();"></button>
+    
+<div class="logo-container">
+    <aside>
+        <a class="aside-logo"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a class="aside-logo"><i class="fa-brands fa-youtube fa-xl"></i></a>
+        <a class="aside-logo"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+    </aside>
+</div>
+</div>
+
+<!-- Colour changer-->
+
+<div class="colour-container">
+
+</div>
 <!--HEADER
 
     looks good
     animate upon load/scroll the text appearing then the picture
 -->
 <div class="header-container">
+    <div class="image">
+        <img class="behind-image hidden2" src="Joe.png">
+    </div>
     <div class="header hidden">
         <h1>Jupiter Manikiza</h1>
         <h2 class="header-changer">Full-Stack Developer</h2>
         <h2>London, UK</h2>
     </div>
-    <div class="image">
-        <img class="behind-image hidden2" src="Joe.png">
-    </div>
+
 </div>
 
 <!--BEHIND WORK CONTAINER - PICTURES
@@ -98,7 +126,7 @@
         <p></p>
         </div>
     </div>
-    <h4 class="work-item-header-left hidden">crud system</h4>
+    <h4 class="work-item-header-left hidden">Cruise Ship Booking System</h4>
     <div class="work-item hidden1">
         <div class="work-item-left hidden1">
             <p></p>
@@ -112,7 +140,7 @@
         <p></p>
         </div>
     </div>
-    <h4 class="work-item-header-left hidden1">wonder</h4>
+    <h4 class="work-item-header-left hidden1">Multiple Web Designs</h4>
     <div class="work-item hidden">
         <div class="work-item-left hidden">
             <p></p>
@@ -128,10 +156,12 @@
 <div class="contact-container hidden">
     <h4>Contact</h4>
     <div class="contact-form hidden">
-        <form>
+        <form action="https://formsubmit.co/J.Manikiza@hotmail.com" method="POST">
             <input type="text"  class="contact-input hidden" placeholder="Name" required>
             <input type="email"  class="contact-input hidden" placeholder="Email@example.com" required>
             <textarea placeholder="Say hello!.." class="contact-input hidden"  required></textarea>
+<!--            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
+            <input type="hidden" name="_autoresponse" value="Thank you for your message, I'll be in touch as soon as I can. Kind regards, J.M">
             <input type="submit" class="contact-input submit hidden"  value="submit">
         </form>
     </div>
