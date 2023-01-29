@@ -54,3 +54,51 @@ function asideAnim() {
 
 
   }
+
+document.getElementsByTagName('head')[0].appendChild(style);
+document.select
+
+
+
+document.getElementById('white').addEventListener("click", function() {
+    updateStyles("white");
+  });
+  
+  document.getElementById('blue').addEventListener("click", function() {
+    updateStyles("blue");
+  });
+  
+  document.getElementById('red').addEventListener("click", function() {
+    updateStyles("red");
+  });
+
+  document.getElementById('black').addEventListener("click", function() {
+    updateStyles("black");
+  });
+
+  document.getElementById('green').addEventListener("click", function() {
+    updateStyles("green");
+  });
+
+  function updateStyles(color) {
+    var sheet = document.styleSheets[0];
+
+    if (color === "white") {
+        console.log("white");
+        sheet.insertRule(":root { --main-color: rgba(255, 255, 255, 1); --font-color: rgba(0, 0, 0, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(0, 0, 0, 1); --shadow-color: rgba(0, 0, 0, 1); --aside-gradient-one: rgba(255, 255, 255, 1); --aside-gradient-two: rgba(255, 255, 255, 0.01); --nav-gradient-main: rgba(255, 255, 255, 1); --nav-gradient-two: rgba(255, 255, 255, 0); --item-accent: rgba(255, 255, 255, 1); --contact-colour: rgba(255, 255, 255, 1); --contact-border-colour: rgba(0, 0, 0, 1); --footer-line: rgba(0, 0, 0, 1); }");
+    } else if (color === "blue") {
+        console.log("blue");
+        sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
+} else if (color === "red") {
+    console.log("red");
+    sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
+} else if (color === "black") {
+    console.log("black");
+    sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
+}else if (color === "green") {
+    console.log("green");
+    sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
+}
+    return sheet;
+}
+

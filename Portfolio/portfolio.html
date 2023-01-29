@@ -3,10 +3,11 @@
 <head>
     <title>木星</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
 <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 <script defer src="script.js"></script>
 <script src="https://kit.fontawesome.com/941097557f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<style id = changer-styles></style>
 </head>
 
 <!--
@@ -30,13 +31,7 @@
 
 -->
 <nav>
-    <div class="colour-changer-container">
-        <div class="white-colour"></div>
-        <div class="blue-colour"></div>
-        <div class="red-colour"></div>
-        <div class="black-colour"></div>
-        <div class="green-colour"></div>
-    </div>
+
     <ul>
         <li class="logo">J. M.</li>
         <li class="nav-element"><a href="portfolio.html#work">Work</a></li>
@@ -71,9 +66,14 @@
 
 <!-- Colour changer-->
 
-<div class="colour-container">
+    <div class="colour-changer-container">
+        <button id= "white" onclick = "updateStyles();"><div class="white-colour"></div></button>
+        <button id= "blue" onclick = "updateStyles();"><div class="blue-colour"></div></button>
+        <button id = "red" onclick = "updateStyles();"><div class="red-colour"></div></button>
+        <button id="black" onclick = "updateStyles();"><div class="black-colour"></div></button>
+        <button id="green" onclick = "updateStyles();"><div class="green-colour"></div></button>
+    </div>
 
-</div>
 <!--HEADER
 
     looks good
@@ -120,28 +120,28 @@
 <div class="work-container">
     <h4 class="work-header hidden">Work</h4>
     <h4 class="work-item-header-right hidden1">Consultation Management System</h4>
-    <div class="work-item hidden">
+    <div class="work-item hidden item-leftside">
         <div class="work-item-left hidden"><img src="WSCC.jpg"></div>
         <div class="work-item-right hidden">
         <p></p>
         </div>
     </div>
     <h4 class="work-item-header-left hidden">Cruise Ship Booking System</h4>
-    <div class="work-item hidden1">
+    <div class="work-item hidden1 item-rightside">
         <div class="work-item-left hidden1">
             <p></p>
         </div>
         <div class="work-item-right hidden1"><img src="Cruise.png"></div>
     </div>
     <h4 class="work-item-header-right hidden">3D Interactive Product</h4>
-    <div class="work-item hidden1">
+    <div class="work-item hidden item-leftside">
         <div class="work-item-left hidden1"><img src="Game.jpg"></div>
         <div class="work-item-right hidden1">
         <p></p>
         </div>
     </div>
     <h4 class="work-item-header-left hidden1">Multiple Web Designs</h4>
-    <div class="work-item hidden">
+    <div class="work-item hidden1 item-rightside">
         <div class="work-item-left hidden">
             <p></p>
         </div>
