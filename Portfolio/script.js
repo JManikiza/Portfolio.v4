@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries) => {
                 entry.target.classList.add('show1');
             }
         } else {
-            if (entry.target.classList.contains("hidden")) {
+            if (entry.target.classList.contains("hidden") || entry.target.classList.contains("hidden1") || entry.target.classList.contains("hidden2")) {
                 entry.target.classList.remove('show');
             }
         }
@@ -54,51 +54,147 @@ function asideAnim() {
 
 
   }
+/*
+  var whiteTheme = document.getElementById("white");
+  var blueTheme = document.getElementById("blue");
+  var redTheme = document.getElementById("red");
+  var blackTheme = document.getElementById("black");
+  var greenTheme = document.getElementById("green");
 
-document.getElementsByTagName('head')[0].appendChild(style);
-document.select
-
-
-
-document.getElementById('white').addEventListener("click", function() {
-    updateStyles("white");
-  });
+  var whiteThemeImages = document.getElementsByClassName("white-theme-img");
+  var Header = document.getElementsByClassName("header-container");
+  var graffiti = document.getElementById("graffiti");
   
-  document.getElementById('blue').addEventListener("click", function() {
-    updateStyles("blue");
-  });
   
-  document.getElementById('red').addEventListener("click", function() {
-    updateStyles("red");
-  });
+  whiteTheme.onclick = function(){
+      document.body.classList.remove("blue-theme", "red-theme", "black-theme", "green-theme");
+      document.body.classList.toggle("white-theme");
+     
+      whiteThemeImages.classlist.remove("img-disappear");
+      Header.classList.remove("white-header-disappear");
+      graffiti.classlist.add("graffiti");
+  };
+  
+  blueTheme.onclick = function(){
+      document.body.classList.remove("white-theme", "red-theme", "black-theme", "green-theme");
+      document.body.classList.toggle("blue-theme");
 
-  document.getElementById('black').addEventListener("click", function() {
-    updateStyles("black");
-  });
+      whiteThemeImages.classlist.add("img-disappear");
+      Header.classlist.add("white-header-disappear");
+      graffiti.classlist.remove("graffiti");
 
-  document.getElementById('green').addEventListener("click", function() {
-    updateStyles("green");
-  });
+  };
+  
+  redTheme.onclick = function(){
+      document.body.classList.remove("white-theme", "blue-theme", "black-theme", "green-theme");
+      document.body.classList.toggle("red-theme");
 
-  function updateStyles(color) {
-    var sheet = document.styleSheets[0];
+      whiteThemeImages.add("img-disappear");
+      Header.add("white-header-disappear");
+  };
+  
+  blackTheme.onclick = function(){
+      document.body.classList.remove("white-theme", "blue-theme", "red-theme", "green-theme");
+      document.body.classList.toggle("black-theme");
 
-    if (color === "white") {
-        console.log("white");
-        sheet.insertRule(":root { --main-color: rgba(255, 255, 255, 1); --font-color: rgba(0, 0, 0, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(0, 0, 0, 1); --shadow-color: rgba(0, 0, 0, 1); --aside-gradient-one: rgba(255, 255, 255, 1); --aside-gradient-two: rgba(255, 255, 255, 0.01); --nav-gradient-main: rgba(255, 255, 255, 1); --nav-gradient-two: rgba(255, 255, 255, 0); --item-accent: rgba(255, 255, 255, 1); --contact-colour: rgba(255, 255, 255, 1); --contact-border-colour: rgba(0, 0, 0, 1); --footer-line: rgba(0, 0, 0, 1); }");
-    } else if (color === "blue") {
-        console.log("blue");
-        sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
-} else if (color === "red") {
-    console.log("red");
-    sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
-} else if (color === "black") {
-    console.log("black");
-    sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
-}else if (color === "green") {
-    console.log("green");
-    sheet.insertRule(":root { --main-color: rgba(0, 0, 255, 1); --font-color: rgba(255, 255, 255, 1); --accent-color: rgba(2, 157, 213, 1); --text-shadow: rgba(255, 255, 255, 1); --shadow-color: rgba(0, 0, 255, 1); --aside-gradient-one: rgba(0, 0, 255, 1); --aside-gradient-two: rgba(0, 0, 255, 0.01); --nav-gradient-main: rgba(0, 0, 255, 1); --nav-gradient-two: rgba(0, 0, 255, 0); --item-accent: rgba(0, 0, 255, 1); --contact-colour: rgba(0, 0, 255, 1); --contact-border-colour: rgba(255, 255, 255, 1); --footer-line: rgba(255, 255, 255, 1); }");
-}
-    return sheet;
-}
+      whiteThemeImages.add("img-disappear");
+      Header.add("white-header-disappear");
+  };
+  
+  greenTheme.onclick = function(){
+      document.body.classList.remove("white-theme", "blue-theme", "red-theme", "black-theme");
+      document.body.classList.toggle("green-theme");
 
+      whiteThemeImages.add("img-disappear");
+      Header.add("white-header-disappear");
+  };*/
+
+  var whiteTheme = document.getElementById("white");
+var blueTheme = document.getElementById("blue");
+var redTheme = document.getElementById("red");
+var blackTheme = document.getElementById("black");
+var greenTheme = document.getElementById("green");
+
+var whiteThemeImages = document.getElementsByClassName("white-theme-img");
+var header = document.getElementsByClassName("header-container");
+var graffiti = document.getElementById("graffiti");
+
+whiteTheme.onclick = function(){
+    console.log("White theme");
+    document.body.classList.remove("blue-theme", "red-theme", "black-theme", "green-theme");
+    document.body.classList.toggle("white-theme");
+
+    Array.from(whiteThemeImages).forEach(img => {
+        img.classList.remove("img-disappear");
+    });
+
+    Array.from(header).forEach(headerElement => {
+        headerElement.classList.remove("white-header-disappear");
+    });
+
+    graffiti.classList.add("graffiti");
+};
+
+blueTheme.onclick = function(){
+    console.log("blue theme");
+
+    document.body.classList.remove("white-theme", "red-theme", "black-theme", "green-theme");
+    document.body.classList.toggle("blue-theme");
+
+    Array.from(whiteThemeImages).forEach(img => {
+        img.classList.add("img-disappear");
+    });
+
+    Array.from(header).forEach(headerElement => {
+        headerElement.classList.add("white-header-disappear");
+    });
+
+    graffiti.classList.remove("graffiti");
+};
+
+redTheme.onclick = function(){
+    document.body.classList.remove("white-theme", "blue-theme", "black-theme", "green-theme");
+    document.body.classList.toggle("red-theme");
+
+    Array.from(whiteThemeImages).forEach(img => {
+        img.classList.add("img-disappear");
+    });
+
+    Array.from(header).forEach(headerElement => {
+        headerElement.classList.add("white-header-disappear");
+    });
+};
+
+blackTheme.onclick = function(){
+    document.body.classList.remove("white-theme", "blue-theme", "red-theme", "green-theme");
+    document.body.classList.toggle("black-theme");
+
+    Array.from(whiteThemeImages).forEach(img => {
+        img.classList.add("img-disappear");
+    });
+
+    /*Array.from(header).forEach(headerElement => {
+        headerElement.classList.add("white-header-disappear");
+    });*/
+
+    Array.from(header).forEach(headerElement => {
+        headerElement.classList.remove("white-header-disappear");
+    });
+
+    
+    graffiti.classList.add("graffiti");
+};
+
+greenTheme.onclick = function(){
+    document.body.classList.remove("white-theme", "blue-theme", "red-theme", "black-theme");
+    document.body.classList.toggle("green-theme");
+
+    Array.from(whiteThemeImages).forEach(img => {
+        img.classList.add("img-disappear");
+    });
+
+    Array.from(header).forEach(headerElement => {
+        headerElement.classList.add("white-header-disappear");
+    });
+
+};

@@ -1,23 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
+/*img-disappear and disappear both need css + JS*/
 
 :root{
 
+  --main-color: 255,255,255,1;
+  --font-color: 0,0,0,1;
+  --accent-color: 189, 13, 0,1;
+  --text-shadow: 0,0,0,1;
+  --shadow-color: 66, 66, 66, 1;
+  --aside-gradient-one: 255,255,255,0;
+  --aside-gradient-two: 228, 225, 225, 0.4;
+  --nav-gradient-main: 255,255,255,1;
+  --nav-gradient-two: 255,255,255,0;
+  --item-accent: 251, 251, 250, 1;
+  --contact-colour:236, 234, 234, 1;
+  --contact-border-colour: 236, 234, 234,1;
+  --footer-line: 143, 143, 143,1; 
+  transition-duration: 0.7s; 
 
---main-color: 255,255,255,1;
---font-color: 0,0,0,1;
---accent-color: 189, 13, 0,1;
---text-shadow: 0,0,0,1;
---shadow-color: 66, 66, 66, 1;
---aside-gradient-one: 255,255,255,0;
---aside-gradient-two: 228, 225, 225, 0.4;
---nav-gradient-main: 255,255,255,1;
---nav-gradient-two: 255,255,255,0;
---item-accent: 251, 251, 250, 1;
---contact-colour:236, 234, 234, 1;
---contact-border-colour: 236, 234, 234,1;
---footer-line: 143, 143, 143,1; 
 }
+
+.white-theme{
+  --main-color: 255,255,255,1;
+  --font-color: 0,0,0,1;
+  --accent-color: 189, 13, 0,1;
+  --text-shadow: 0,0,0,1;
+  --shadow-color: 66, 66, 66, 1;
+  --aside-gradient-one: 255,255,255,0;
+  --aside-gradient-two: 228, 225, 225, 0.4;
+  --nav-gradient-main: 255,255,255,1;
+  --nav-gradient-two: 255,255,255,0;
+  --item-accent: 251, 251, 250, 1;
+  --contact-colour:236, 234, 234, 1;
+  --contact-border-colour: 236, 234, 234,1;
+  --footer-line: 143, 143, 143,1; 
+  transition-duration: 0.7s; 
+
+}
+
+.blue-theme{/*need to do*/
+  --main-color: 9, 52, 77,1; 
+  --font-color: 255, 230, 58, 1;
+  --accent-color: 255, 230, 58, 1;
+  --text-shadow: 255, 230, 58, 1;
+  --shadow-color: 66, 66, 66, 1;
+  --aside-gradient-one: 255,255,255,0;
+  --aside-gradient-two: 228, 225, 225, 0.4;
+  --nav-gradient-main:  9, 52, 77,1;
+  --nav-gradient-two: 9, 52, 77,0;
+  --item-accent: 255, 230, 58, 1;
+  --contact-colour:236, 234, 234, 1;
+  --contact-border-colour: 236, 234, 234,1;
+  --footer-line: 143, 143, 143,1;
+  transition-duration: 0.7s; 
+
+}
+
+.red-theme{/*need to do*/
+  --main-color: 255,255,255,1;
+  --font-color: 0,0,0,1;
+  --accent-color: 189, 13, 0,1;
+  --text-shadow: 0,0,0,1;
+  --shadow-color: 66, 66, 66, 1;
+  --aside-gradient-one: 255,255,255,0;
+  --aside-gradient-two: 228, 225, 225, 0.4;
+  --nav-gradient-main: 255,255,255,1;
+  --nav-gradient-two: 255,255,255,0;
+  --item-accent: 251, 251, 250, 1;
+  --contact-colour:236, 234, 234, 1;
+  --contact-border-colour: 236, 234, 234,1;
+  --footer-line: 143, 143, 143,1; 
+  transition-duration: 0.7s; 
+
+}
+
+.black-theme{
+  --main-color: 19, 11, 5 , 1;
+  --font-color: 179, 140, 78, 1;
+  --accent-color: 208, 179, 132, 1; 
+  --text-shadow: 179, 140, 78, 1;
+  --shadow-color: 0, 0, 255, 1;
+  --aside-gradient-one: 0, 0, 255, 1; 
+  --aside-gradient-two: 0, 0, 255, 0.01;
+  --nav-gradient-main: 19, 11, 5 , 1;
+  --nav-gradient-two: 19, 11, 5 , 0; 
+  --item-accent: 9, 34, 23, 0.2;
+  --contact-colour: 52, 48, 54, 1;
+  --contact-border-colour: 255, 255, 255, 1;
+  --footer-line: 255, 255, 255, 1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition-duration: 0.7s; 
+}
+
+.green-theme{ /*need to do*/
+  --main-color: 255,255,255,1;
+  --font-color: 0,0,0,1;
+  --accent-color: 189, 13, 0,1;
+  --text-shadow: 0,0,0,1;
+  --shadow-color: 66, 66, 66, 1;
+  --aside-gradient-one: 255,255,255,0;
+  --aside-gradient-two: 228, 225, 225, 0.4;
+  --nav-gradient-main: 255,255,255,1;
+  --nav-gradient-two: 255,255,255,0;
+  --item-accent: 251, 251, 250, 1;
+  --contact-colour:236, 234, 234, 1;
+  --contact-border-colour: 236, 234, 234,1;
+  --footer-line: 143, 143, 143,1; 
+  transition-duration: 0.7s; 
+
+}
+
+
 
 * {
   margin: 0px;
@@ -280,16 +374,17 @@ transform: translateY(80%);
   left: 9vw;
   display:inline;
   width: 220px;
-  height: 30px;
+  height: 300px;
   z-index: 5;
 
 }
 .white-colour, .blue-colour, .red-colour,
 .black-colour, .green-colour{
   position:relative;
+  display: inline-block;
   width: 25px;
   height: 25px;
-  margin-bottom:5px;
+  margin-bottom:0px;
 }
 
 .white-colour{
@@ -314,6 +409,18 @@ transform: translateY(80%);
   border: 1px solid black;
   background: linear-gradient(135deg,rgba(255,255,255,1) 50%,rgba(0,0,0,1) 50% 90%,rgba(255,150,79,1) 90%);
 
+}
+
+.img-disappear{
+display:none;
+}
+
+.white-header-disappear{
+display:none;
+}
+
+.graffiti {
+  display:none;
 }
 
 /*NAV ELEMENTS*/
@@ -360,6 +467,8 @@ nav a:hover{
 
 /*HEADER CONTENTS*/
 
+
+
 .header-container {
   margin: auto;
   width:56%;
@@ -389,6 +498,18 @@ nav a:hover{
   border-radius: 8px;
   z-index: -1;
   height: 800px;
+}
+
+.blue-header-container{
+  margin: auto;
+  width:56%;
+  font-size: 60px;
+  font-weight: 700;
+  position: absolute;
+  left:25%;
+  right: 25%;
+  top: 25%; 
+  z-index: 1; 
 }
 
 /*SHAPES OR PLANETS*/

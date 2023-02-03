@@ -11,14 +11,9 @@
 </head>
 
 <!--
-    x-Orange and white portfolio, 
-    onclick change colours
-    x-blur the header a tad, 
     find out how to use mixblendmode 
     add small animation from element to next element
-    top work project could dissipate only allowing two on screen at a time
     with a image shape behind it still moving with parralax
-    x- sticky nav bar
     call to actions
 -->
 <body>
@@ -28,6 +23,8 @@
     NAV
 
     doesnt need a whole lot of work
+
+    FIND HOW TO FIX THE COLOUR CHANGE ANIMATION
 
 -->
 <nav>
@@ -67,21 +64,22 @@
 <!-- Colour changer-->
 
     <div class="colour-changer-container">
-        <button id= "white" onclick = "updateStyles();"><div class="white-colour"></div></button>
-        <button id= "blue" onclick = "updateStyles();"><div class="blue-colour"></div></button>
-        <button id = "red" onclick = "updateStyles();"><div class="red-colour"></div></button>
-        <button id="black" onclick = "updateStyles();"><div class="black-colour"></div></button>
-        <button id="green" onclick = "updateStyles();"><div class="green-colour"></div></button>
+        <button id= "white"><div class="white-colour"></div></button>
+        <button id= "blue" ><div class="blue-colour"></div></button>
+        <button id = "red" ><div class="red-colour"></div></button>
+        <button id="black" ><div class="black-colour"></div></button>
+        <button id="green" ><div class="green-colour"></div></button>
     </div>
 
-<!--HEADER
-
-    looks good
-    animate upon load/scroll the text appearing then the picture
+<!--
+    HEADER
 -->
+<div id = "graffiti" class="blue-header-container graffiti">
+    <img src="jupiter-graffiti.png">
+</div>
 <div class="header-container">
     <div class="image">
-        <img class="behind-image hidden2" src="Joe.png">
+        <img class="behind-image hidden2 white-theme-img" src="Joe.png">
     </div>
     <div class="header hidden">
         <h1>Jupiter Manikiza</h1>
@@ -91,29 +89,26 @@
 
 </div>
 
-<!--BEHIND WORK CONTAINER - PICTURES
+<!--
+    
+    BEHIND WORK CONTAINER - PICTURES
 
-    plenty of pictures, no more.
-    animate them appearing and maybe moving/spinning
 -->
-<div class="moon shape hidden"><img class="shape-size" src="moon.png"></div>
-<div class="jupiter shape hidden1"><img class="shape-size" src="jupiter.png"></div>
-<div class="saturn shape hidden"><img  class="shape-size"src="saturn.png"></div>
-<div class="earth shape hidden1"><img class="shape-size" src="earth.jpg"></div>
-<div class="galaxy shape hidden2"><img class="shape-size" src="galaxy.png"></div>
+
+<div class="moon shape hidden"><img class="shape-size white-theme-img" src="moon.png"></div>
+<div class="jupiter shape hidden1"><img class="shape-size white-theme-img" src="jupiter.png"></div>
+<div class="saturn shape hidden"><img  class="shape-size white-theme-img"src="saturn.png"></div>
+<div class="earth shape hidden1"><img class="shape-size white-theme-img" src="earth.jpg"></div>
+<div class="galaxy shape hidden2"><img class="shape-size white-theme-img" src="galaxy.png"></div>
 
 <!--
     WORK
 
-    animate them coming into the screen upon scroll
-    fill them with projects. must complete them...
-    add gui to the cabinship one
-
-    WE HAVE GOOD WORK TO PROVIDE 
+    fill them with projects. must complete ALL of said projects
 
     add github repos
     add video presentations
-    add something else, maybe host it here to download
+    add something else, maybe host it here to download or demos
 
 -->
 <div id="work"></div>
@@ -121,7 +116,7 @@
     <h4 class="work-header hidden">Work</h4>
     <h4 class="work-item-header-right hidden1">Consultation Management System</h4>
     <div class="work-item hidden item-leftside">
-        <div class="work-item-left hidden"><img src="WSCC.jpg"></div>
+        <div class="work-item-left hidden white-theme-img"><img src="WSCC.jpg"></div>
         <div class="work-item-right hidden">
         <p></p>
         </div>
@@ -131,11 +126,11 @@
         <div class="work-item-left hidden1">
             <p></p>
         </div>
-        <div class="work-item-right hidden1"><img src="Cruise.png"></div>
+        <div class="work-item-right hidden1 white-theme-img"><img src="Cruise.png"></div>
     </div>
     <h4 class="work-item-header-right hidden">3D Interactive Product</h4>
     <div class="work-item hidden item-leftside">
-        <div class="work-item-left hidden1"><img src="Game.jpg"></div>
+        <div class="work-item-left hidden1 white-theme-img"><img src="Game.jpg"></div>
         <div class="work-item-right hidden1">
         <p></p>
         </div>
@@ -145,12 +140,14 @@
         <div class="work-item-left hidden">
             <p></p>
         </div>
-        <div class="work-item-right hidden"><img src="websites.jpg"></div>
+        <div class="work-item-right hidden white-theme-img"><img src="websites.jpg"></div>
     </div>
 </div>
 
 <!--
     CONTACT
+
+    Not great, not bad.
 -->
 <div id="contact"></div>
 <div class="contact-container hidden">
