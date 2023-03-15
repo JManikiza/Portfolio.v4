@@ -1,4 +1,8 @@
+/*White font*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/*Black - font*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /*img-disappear and disappear both need css + JS*/
 
@@ -42,7 +46,7 @@
 .blue-theme{/*need to do*/
   --main-color: 9, 52, 77,1; 
   --font-color: 255, 230, 58, 1;
-  --accent-color: 255, 230, 58, 1;
+  --accent-color: 255,17,34,1;
   --text-shadow: 255, 230, 58, 1;
   --shadow-color: 66, 66, 66, 1;
   --aside-gradient-one: 255,255,255,0;
@@ -89,7 +93,7 @@
   --contact-colour: 52, 48, 54, 1;
   --contact-border-colour: 255, 255, 255, 1;
   --footer-line: 255, 255, 255, 1;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Space Mono', monospace;
   transition-duration: 0.7s; 
 }
 
@@ -130,7 +134,7 @@ body {
   line-height: 1.27;
   font-weight: 400;
   z-index: 0;
-  text-shadow: 0 0 1.5px rgba(var(--text-shadow));
+  /* text-shadow: 0 0 1.5px rgba(var(--text-shadow)); */
   overflow-x: hidden;
   background: rgba(var(--main-color));
   color: rgba(var(--font-color));
@@ -329,12 +333,14 @@ body {
   color: rgba(var(--accent-color));
   transition-duration: 1s;
   transform: scale(1.2);
+
 }
 
 .fa-linkedin:hover{
   color: rgba(var(--accent-color));
   transition-duration: 1s;
   transform: scale(1.2);
+
 }
 
 .hidden{
@@ -370,13 +376,16 @@ transform: translateY(80%);
 
 .colour-changer-container{
   position:fixed;
-  top:20vh;
-  left: 9vw;
+  top:79dvh;
+  left: 97.5dvw;
   display:inline;
-  width: 220px;
-  height: 300px;
+  width: 40px;
+  height: 240px;
   z-index: 5;
+}
 
+.colour-changer-container button{
+  background: none;
 }
 .white-colour, .blue-colour, .red-colour,
 .black-colour, .green-colour{
@@ -384,30 +393,45 @@ transform: translateY(80%);
   display: inline-block;
   width: 25px;
   height: 25px;
-  margin-bottom:0px;
+  margin-bottom:5px;
+  border-radius: 50% 50% 0px 50%;
+
+}
+
+.white-colour:hover, .blue-colour:hover, .red-colour:hover,
+.black-colour:hover, .green-colour:hover{
+  border: 2px solid red;
+  transform: scale(1.1);
+  transition: 1.3s ease-in-out;
 }
 
 .white-colour{
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.6);
   background: linear-gradient(135deg,rgba(255,255,255,1) 50%,rgba(0,0,0,1) 50% 90%,rgba(255,150,79,1) 90%);
 }
 .blue-colour{
-  border: 1px solid black;
-  background: linear-gradient(135deg,rgba(255,255,255,1) 50%,rgba(0,0,0,1) 50% 90%,rgba(255,150,79,1) 90%);
+  border: 1px solid rgba(0,0,0,0.6);
+  background: linear-gradient(135deg,rgba(9, 52, 77,1) 50%,rgba(255, 230, 58, 1) 50% 90%,rgba(255,150,79,1) 90%);
 
 }
 .red-colour{
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.6);
   background: linear-gradient(135deg,rgba(255,255,255,1) 50%,rgba(0,0,0,1) 50% 90%,rgba(255,150,79,1) 90%);
 }
 .black-colour{
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.6);
   background: linear-gradient(135deg,rgba(27, 26, 26,1) 50%,rgba(138, 94, 8,1) 50% 90%,rgba(2, 157, 213,1) 90%);
 
 }
 .green-colour{
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.6);
   background: linear-gradient(135deg,rgba(255,255,255,1) 50%,rgba(0,0,0,1) 50% 90%,rgba(255,150,79,1) 90%);
+
+}
+
+.highlight{
+  border: 2px solid rgba(var(--accent-color));
+  box-shadow: 0 0 25px rgba(var(--accent-color));
 
 }
 
@@ -421,6 +445,7 @@ display:none;
 
 .graffiti {
   display:none;
+  transform: scale(0);
 }
 
 /*NAV ELEMENTS*/
@@ -452,14 +477,24 @@ nav li{
 
 nav a {
   text-decoration: none;
-  color: rgba(var(--font-color));
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(rgba(var(--font-color)) 100%, rgba(var(--accent-color)));
+  filter: blur(0.3px);
+  
 
 }
 
 nav a:hover{
-  color: rgba(var(--accent-color));;
-  opacity: 0.8;
-  transition-duration: 1s;
+  background-image: linear-gradient(rgba(var(--font-color)), rgba(var(--accent-color)));
+  text-shadow: 0px 0px 1px rgba(var(--font-color));
+
+  transition-duration: 1.5s;
+}
+
+.download-arrow{
+  display: inline-block;
+  animation: imgPulse 2s ease infinite;
 }
 
 .nav a:hover:after {}
@@ -502,7 +537,6 @@ nav a:hover{
 
 .blue-header-container{
   margin: auto;
-  width:56%;
   font-size: 60px;
   font-weight: 700;
   position: absolute;
@@ -510,6 +544,62 @@ nav a:hover{
   right: 25%;
   top: 25%; 
   z-index: 1; 
+}
+
+.grafitti-img{
+ display: block;
+ margin-left: auto;
+ margin-right:auto;
+ animation: imgBounce 2s ease;
+ -webkit-filter: drop-shadow(20px 20px 20px #222);
+ filter: drop-shadow(20px 20px 20px #222);
+ transform-origin: center;
+ transition: transform 0.5s;
+}
+
+/*create div with same img,
+cut that image out/transparent and make it become a shadow,
+skew and place
+add animations to both grafitti and 'shadow'
+*/
+
+@keyframes imgBounce {
+
+  0%{
+    transform: scale(0);
+  }
+
+  50%{
+    transform: scale(1.4);
+  }
+  60%{
+    transform: scale(1.2);
+  }
+
+  75%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
+}
+
+@keyframes imgPulse{
+  0%{
+    transform: translateY(0%);
+    color:rgba(var(--accent-color));
+
+  }
+
+  60%{
+    transform: translateY(-20%);
+
+  }
+
+  100%{
+    transform: translateY(0%);
+  }
 }
 
 /*SHAPES OR PLANETS*/

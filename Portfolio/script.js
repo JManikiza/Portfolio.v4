@@ -122,7 +122,15 @@ var graffiti = document.getElementById("graffiti");
 whiteTheme.onclick = function(){
     console.log("White theme");
     document.body.classList.remove("blue-theme", "red-theme", "black-theme", "green-theme");
-    document.body.classList.toggle("white-theme");
+    document.body.classList.add("white-theme");
+    document.getElementById('white').classList.add("highlight");
+    document.getElementById('blue').classList.remove("highlight");
+    document.getElementById('black').classList.remove("highlight");
+    document.getElementById('green').classList.remove("highlight");
+    document.getElementById('red').classList.remove("highlight");
+
+
+
 
     Array.from(whiteThemeImages).forEach(img => {
         img.classList.remove("img-disappear");
@@ -139,7 +147,12 @@ blueTheme.onclick = function(){
     console.log("blue theme");
 
     document.body.classList.remove("white-theme", "red-theme", "black-theme", "green-theme");
-    document.body.classList.toggle("blue-theme");
+    document.body.classList.add("blue-theme");
+    document.getElementById('blue').classList.add("highlight");
+    document.getElementById('white').classList.remove("highlight");
+    document.getElementById('black').classList.remove("highlight");
+    document.getElementById('green').classList.remove("highlight");
+    document.getElementById('red').classList.remove("highlight");
 
     Array.from(whiteThemeImages).forEach(img => {
         img.classList.add("img-disappear");
@@ -154,7 +167,12 @@ blueTheme.onclick = function(){
 
 redTheme.onclick = function(){
     document.body.classList.remove("white-theme", "blue-theme", "black-theme", "green-theme");
-    document.body.classList.toggle("red-theme");
+    document.body.classList.add("red-theme");
+    document.getElementById('red').classList.add("highlight");
+    document.getElementById('blue').classList.remove("highlight");
+    document.getElementById('black').classList.remove("highlight");
+    document.getElementById('green').classList.remove("highlight");
+    document.getElementById('white').classList.remove("highlight");
 
     Array.from(whiteThemeImages).forEach(img => {
         img.classList.add("img-disappear");
@@ -167,7 +185,12 @@ redTheme.onclick = function(){
 
 blackTheme.onclick = function(){
     document.body.classList.remove("white-theme", "blue-theme", "red-theme", "green-theme");
-    document.body.classList.toggle("black-theme");
+    document.body.classList.add("black-theme");
+    document.getElementById('black').classList.add("highlight");
+    document.getElementById('blue').classList.remove("highlight");
+    document.getElementById('white').classList.remove("highlight");
+    document.getElementById('green').classList.remove("highlight");
+    document.getElementById('red').classList.remove("highlight");
 
     Array.from(whiteThemeImages).forEach(img => {
         img.classList.add("img-disappear");
@@ -187,7 +210,12 @@ blackTheme.onclick = function(){
 
 greenTheme.onclick = function(){
     document.body.classList.remove("white-theme", "blue-theme", "red-theme", "black-theme");
-    document.body.classList.toggle("green-theme");
+    document.body.classList.add("green-theme");
+    document.getElementById('green').classList.add("highlight");
+    document.getElementById('blue').classList.remove("highlight");
+    document.getElementById('black').classList.remove("highlight");
+    document.getElementById('white').classList.remove("highlight");
+    document.getElementById('red').classList.remove("highlight");
 
     Array.from(whiteThemeImages).forEach(img => {
         img.classList.add("img-disappear");
@@ -198,3 +226,28 @@ greenTheme.onclick = function(){
     });
 
 };
+
+
+
+
+
+(function() {
+    const graffitiImg = document.querySelector('.grafitti-img');
+    const graffitiContainer = document.querySelector('.blue-header-container');
+    
+    if (!graffitiImg) {
+        console.error("Error: Element with class 'grafitti-img' not found.");
+        return;
+    }
+    
+    graffitiContainer.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+    
+        graffitiImg.style.transform = `rotateX(${y * 30}deg) rotateY(${x * -30}deg)`;
+    });
+    
+    graffitiContainer.addEventListener('mouseout', () => {
+        graffitiImg.style.transform = 'rotate(0)';
+    });
+})();
