@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>木星</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<script defer src="https://smtpjs.com/v3/smtp.js"></script>
+<script defer src="script.js"></script>
+<script src="https://kit.fontawesome.com/941097557f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<style id = changer-styles></style>
+</head>
+
+<!--
+    find out how to use mixblendmode 
+    add small animation from element to next element
+    with a image shape behind it still moving with parralax
+    call to actions
+-->
+<body>
+<div id="top"></div>
+
+<!--
+    NAV
+
+    doesnt need a whole lot of work
+
+    FIND HOW TO FIX THE COLOUR CHANGE ANIMATION
+
+-->
+<nav>
+
+    <ul>
+        <li class="logo">J.M.</li>
+        <li class="nav-element"><a href="portfolio.html#work">Work</a></li>
+        <li class="nav-element"><a href="about.html">About</a></li>
+        <li class="nav-element"><a href="portfolio.html#contact">Contact</a></li>
+        <a class="nav-element resume" href="cv.pdf" target="_blank" rel="noopener noreferrer">Résumé  &nbsp&nbsp<div class="download-arrow">⭳</div></a>
+    </ul>
+</nav>
+
+<!--BUTTON TO TOP
+
+    keep checking it works, ends up going funny sometimes.
+-->
+<a class="to-top" href="#top"><img src="seal-black-border.png"></a>
+
+<!--ADDED GRADIENT IN CSS -->
+<div class="transparency-top"></div>
+<div class="transparency-bottom"></div>
+
+<!--ASIDE ELEMENT-->
+<div class="aside-container">
+        <button  id="button-transform" class="aside-button" onclick="asideAnim();"></button>
+    
+<div class="logo-container">
+    <aside>
+        <a class="aside-logo"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a class="aside-logo"><i class="fa-brands fa-youtube fa-xl"></i></a>
+        <a class="aside-logo"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+    </aside>
+</div>
+</div>
+
+<!-- Colour changer-->
+
+    <div class="colour-changer-container">
+        <button ><div id= "white" class="white-colour highlight"></div></button>
+        <button  ><div id= "blue" class="blue-colour"></div></button>
+        <button  ><div id = "red" class="red-colour"></div></button>
+        <button  ><div id="black" class="black-colour"></div></button>
+        <button  ><div id="green" class="green-colour"></div></button>
+    </div>
+
+<!--
+    HEADER
+-->
+<div id = "graffiti" class="blue-header-container graffiti">
+    <img class= "grafitti-img" src="jupiter-graffiti.png">
+    <img class="behind-image hidden2" src="bluebg2.jpeg">
+</div>
+<div class="header-container">
+    <div class="image">
+        <img class="behind-image hidden2 white-theme-img" src="Joe.png">
+    </div>
+    <div class="header hidden">
+        <h1>Jupiter Manikiza</h1>
+        <h2 class="header-changer">Full-Stack Developer</h2>
+        <h2>London, UK</h2>
+    </div>
+
+</div>
+
+<!--
+    
+    BEHIND WORK CONTAINER - PICTURES
+
+-->
+
+<div class="moon shape hidden"><img class="shape-size white-theme-img" src="moon.png"></div>
+<div class="jupiter shape hidden1"><img class="shape-size white-theme-img" src="jupiter.png"></div>
+<div class="saturn shape hidden"><img  class="shape-size white-theme-img"src="saturn.png"></div>
+<div class="earth shape hidden1"><img class="shape-size white-theme-img" src="earth.jpg"></div>
+<div class="galaxy shape hidden2"><img class="shape-size white-theme-img" src="galaxy.png"></div>
+
+<!--
+    WORK
+
+    fill them with projects. must complete ALL of said projects
+
+    add github repos
+    add video presentations
+    add something else, maybe host it here to download or demos
+
+-->
+<div id="work"></div>
+<div class="work-container">
+    <h4 class="work-header hidden">Work</h4>
+    <h4 class="work-item-header-right hidden1">Consultation Management System</h4>
+    <div class="work-item hidden item-leftside">
+        <div class="work-item-left hidden white-theme-img"><img src="WSCC.jpg"></div>
+        <div class="work-item-right hidden">
+        <p></p>
+        </div>
+    </div>
+    <h4 class="work-item-header-left hidden">Cruise Ship Booking System</h4>
+    <div class="work-item hidden1 item-rightside">
+        <div class="work-item-left hidden1">
+            <p></p>
+        </div>
+        <div class="work-item-right hidden1 white-theme-img"><img src="Cruise.png"></div>
+    </div>
+    <h4 class="work-item-header-right hidden">3D Interactive Product</h4>
+    <div class="work-item hidden item-leftside">
+        <div class="work-item-left hidden1 white-theme-img"><img src="Game.jpg"></div>
+        <div class="work-item-right hidden1">
+        <p></p>
+        </div>
+    </div>
+    <h4 class="work-item-header-left hidden1">Multiple Web Designs</h4>
+    <div class="work-item hidden1 item-rightside">
+        <div class="work-item-left hidden">
+            <p></p>
+        </div>
+        <div class="work-item-right hidden white-theme-img"><img src="websites.jpg"></div>
+    </div>
+</div>
+
+<!--
+    CONTACT
+
+    Not great, not bad.
+-->
+<div id="contact"></div>
+<div class="contact-container hidden">
+    <h4>Contact</h4>
+    <div class="contact-form hidden">
+        <form action="https://formsubmit.co/J.Manikiza@hotmail.com" method="POST">
+            <input type="text"  class="contact-input hidden" placeholder="Name" required>
+            <input type="email"  class="contact-input hidden" placeholder="Email@example.com" required>
+            <textarea placeholder="Say hello!.." class="contact-input hidden"  required></textarea>
+<!--            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
+            <input type="hidden" name="_autoresponse" value="Thank you for your message, I'll be in touch as soon as I can. Kind regards, J.M">
+            <input type="submit" class="contact-input submit hidden"  value="submit">
+        </form>
+    </div>
+
+    <div class="contact-physical hidden">
+        <a class="physical hidden" href="mailto:J.Manikiza@hotmail.co.uk">J.Manikiza@hotmail.co.uk</a>
+        <a class="physical hidden" href="tel:+447725212029">+447725212029</a>
+    </div>
+</div>
+
+</body>
+<footer>
+    <div class="footer-line hidden"></div>
+    <div class="footer-container">
+
+        <p></p>
+    </div>
+</footer>
+</html>
